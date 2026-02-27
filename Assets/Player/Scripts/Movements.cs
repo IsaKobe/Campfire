@@ -16,7 +16,7 @@ public class Movements : MonoBehaviour
     {
         //anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        Move = inputActions.FindAction("Move");
+        Move = inputActions.actionMaps[1].FindAction("Move");
     }
     private void OnEnable()
     {
