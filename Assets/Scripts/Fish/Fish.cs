@@ -37,7 +37,7 @@ namespace Fish
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Bait"))
+            if (collision.gameObject.CompareTag("Hook"))
             {
                 GameObject bait = collision.gameObject;
                 Debug.Log("found bait!");

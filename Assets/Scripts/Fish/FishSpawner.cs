@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Text;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Fish
@@ -14,11 +15,14 @@ namespace Fish
         [SerializeField] float verticalMove;
         [SerializeField] int fishCount = 20;
 
+        [SerializeField] int level = 5;
+
+
         List<Fish> activeFish = new();
 
         private void OnDrawGizmos()
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < level; i++)
             {
                 Vector2 vector2 = GetHeightBounds(i);
                 Gizmos.DrawLine(new(-width, vector2.x), new(width, vector2.x));
@@ -28,11 +32,45 @@ namespace Fish
 
         private void Start()
         {
+            
+            CreateBoundsVertical(-(width + 0.5f));
+            CreateBoundsVertical(width + 0.5f);
+
+            CreateBoundsHorizontal(0.5f);
+            CreateBoundsHorizontal(GetHeightBounds(level - 1).y - 0.5f);
+
             for (int i = 0; i < fishCount; i++)
             {
                 CreateFish(fishes[Random.Range(0, fishes.Count)]);
             }
         }
+
+        void CreateBoundsVertical(float x)
+        {
+            Vector2 bounds = GetHeightBounds(level - 1);
+
+            GameObject gameObject = new GameObject("bound");
+            Rigidbody2D rb = gameObject.AddComponent<Rigidbody2D>();
+            rb.bodyType = RigidbodyType2D.Kinematic;            
+
+            BoxCollider2D collider = gameObject.AddComponent<BoxCollider2D>();
+            gameObject.transform.position = new Vector2(x, bounds.y / 2);
+            collider.size = new Vector2(0.5f, -bounds.y);
+        }
+
+        void CreateBoundsHorizontal(float y)
+        {
+            Vector2 bounds = GetHeightBounds(level - 1);
+
+            GameObject gameObject = new GameObject("bound");
+            Rigidbody2D rb = gameObject.AddComponent<Rigidbody2D>();
+            rb.bodyType = RigidbodyType2D.Kinematic;
+
+            BoxCollider2D collider = gameObject.AddComponent<BoxCollider2D>();
+            gameObject.transform.position = new Vector2(0, y);
+            collider.size = new Vector2(width*2, 0.5f);
+        }
+
 
         public void CreateFish(FishData data)
         {
