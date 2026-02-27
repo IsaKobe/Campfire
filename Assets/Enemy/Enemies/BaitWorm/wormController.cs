@@ -28,9 +28,10 @@ public class wormController : MonoBehaviour
     public void Move() 
     {
         CheckPanic();
+        //každej xtej frame = random rotace
         currentRotateFrame--;
-        float RotationChange = Random.Range((transform.rotation.z - 40),(transform.rotation.z+40));
-        //každej desatej frame = random rotace
+        //float RotationChange = Random.Range((transform.rotation.z - 40),(transform.rotation.z+40));
+        float RotationChange = Random.Range(0, 360);
 
         if (currentRotateFrame == 0) 
         {
