@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class wormController : MonoBehaviour
@@ -8,13 +9,14 @@ public class wormController : MonoBehaviour
     private float currentSpeed;
     public BaitEnemy baitStats;
     private Rigidbody2D rb;
-    private float rotateFrame = 10;
+    private float currentRotateFrame = 50;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         CurrentHealth = baitStats.MaxHealth;
         currentSpeed = baitStats.Speed;
         IsDanger = false;
+        currentRotateFrame = baitStats.RotateFrame;
     }
 
     // Update is called once per frame
@@ -26,27 +28,21 @@ public class wormController : MonoBehaviour
     public void Move() 
     {
         CheckPanic();
-        rotateFrame--;
-        
-        if (rotateFrame ==0) 
-        {
-            transform.rotation = Quaternion.Euler(0, 0, Random.Range(0, 360));
-            if (transform.rotation.z > 90 && transform.rotation.z < 270)
-            {
-                transform.localScale = new Vector3(1, -1, 1);
-            }
-            else
-            {
-                transform.localScale = new Vector3(1, 1, 1);
-            }
+        currentRotateFrame--;
+        float RotationChange = Random.Range((transform.rotation.z - 40),(transform.rotation.z+40));
+        //každej desatej frame = random rotace
 
-            rotateFrame = 10;
+        if (currentRotateFrame == 0) 
+        {
+            transform.rotation = Quaternion.Euler(0, 0, RotationChange);
+            currentRotateFrame = baitStats.RotateFrame;
         }
-            
-        Vector2 movement = transform.position + (-transform.right * currentSpeed);
+        //každje fixed frame posune
+        Vector2 movement = transform.position + (-transform.right * currentSpeed/3);
         rb.MovePosition(movement);
         
     }
+    //hráè je blížko
     public void CheckPanic()
     {
         if (IsDanger)

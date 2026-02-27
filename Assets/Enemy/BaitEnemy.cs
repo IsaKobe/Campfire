@@ -4,6 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "BaitEnemy", menuName = "Scriptable Objects/BaitEnemy")]
 public class BaitEnemy : Enemy
 {
+    public float RotateFrame;
     public virtual void Run() 
     {
     }
