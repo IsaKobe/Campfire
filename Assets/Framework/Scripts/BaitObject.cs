@@ -19,8 +19,7 @@ namespace Framework.Scripts
         {
             if (this.data == null)
             {
-                Baiits b = GameObject.Find("Bait").GetComponent<Baiits>();
-                this.data = b.baits["base"];    
+                this.data = Baits.baits["base"];
             }
             SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
             spriteRenderer.sprite = data.sprite;
