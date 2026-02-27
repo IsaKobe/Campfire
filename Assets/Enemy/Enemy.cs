@@ -7,8 +7,8 @@ public class Enemy : ScriptableObject
 {
     public string Name;
     public float MaxHealth;
-    private float Speed;
-
+    public float Speed;
+    public float Range;
     public virtual void Die() 
     {
         Debug.Log(Name + " died");

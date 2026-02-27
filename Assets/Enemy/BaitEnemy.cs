@@ -10,6 +10,5 @@ public class BaitEnemy : Enemy
     public override void Die() 
     {
         Debug.Log("Drop Bait item");
-        Destroy(this);
     }
 }
