@@ -8,9 +8,10 @@ namespace Fish
     [CreateAssetMenu(fileName = "fish", menuName = "fishData")]
     public class FishData : ScriptableObject
     {
-        public int level;
-        public float speed;
+        public int level = 1;
+        public float speed = 1;
         //public Equip equip;
         public Sprite sprite;
+        public float seeRange = 1;
     }
 }

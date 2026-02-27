@@ -15,3 +15,4 @@ MonoBehaviour:
   level: 0
   speed: 3.15
   sprite: {fileID: 21300000, guid: fe4ba1d2946ca824eb5f26ba6de42fb3, type: 3}
+  seeRange: 5
