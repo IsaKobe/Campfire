@@ -1,10 +1,15 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "AttackEnemy", menuName = "Scriptable Objects/AttackEnemy")]
-public class AttackEnemy : Enemy
+public class AttackEnemyData: EnemyData
 {
     private float AttackDmg;
     private float AttackSpeed;
+
+    public AttackEnemyData() 
+    {
+        Range = 90f;
+    }
     public virtual void Attack()
     {
         Debug.Log("Attacked with" + AttackDmg);

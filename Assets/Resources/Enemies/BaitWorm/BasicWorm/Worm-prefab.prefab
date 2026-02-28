@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1564000340749175808}
   - component: {fileID: 3898612525744126960}
-  - component: {fileID: 1139281577597126330}
   - component: {fileID: 6958123478893743593}
   - component: {fileID: 5020425395780897621}
+  - component: {fileID: 4462443563136913214}
   m_Layer: 0
   m_Name: Worm-prefab
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,20 +94,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1139281577597126330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5530169679468720862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da7ea46d08b61674f80bfa6d59a600b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::wormController
-  CurrentHealth: 0
-  baitStats: {fileID: 11400000, guid: 9d4c6e6a35e466f4f8ba39034dc8e1ba, type: 2}
 --- !u!70 &6958123478893743593
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -172,3 +158,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4462443563136913214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5530169679468720862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f53e0c3fe54b446b863982d69c649d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Enemy.Enemies.BaitEnemy
+  CurrentHealth: 0
+  IsPlayerInView: 0
+  EnemyStats: {fileID: 11400000, guid: 9d4c6e6a35e466f4f8ba39034dc8e1ba, type: 2}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 192
