@@ -181,6 +181,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -237,6 +241,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -300,6 +308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -314,9 +326,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 57953879}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bugs
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -465,6 +477,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -521,6 +537,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -579,6 +599,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -635,6 +659,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -703,6 +731,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -770,6 +802,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -826,6 +862,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1185,6 +1225,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1241,6 +1285,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1304,6 +1352,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1360,6 +1412,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1437,6 +1493,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1581,6 +1641,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1642,6 +1706,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1705,6 +1773,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1766,6 +1838,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1834,6 +1910,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1901,6 +1981,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1963,6 +2047,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2020,6 +2108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2076,6 +2168,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2143,6 +2239,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2272,6 +2372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2328,6 +2432,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2390,6 +2498,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2565,6 +2677,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2637,6 +2753,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2699,6 +2819,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2755,6 +2879,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2817,6 +2945,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2884,6 +3016,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2957,6 +3093,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3018,6 +3158,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3086,6 +3230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3142,6 +3290,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3205,6 +3357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3267,6 +3423,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3324,6 +3484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3380,6 +3544,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3443,6 +3611,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3504,6 +3676,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3572,6 +3748,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3634,6 +3814,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3690,6 +3874,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3758,6 +3946,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3819,6 +4011,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3882,6 +4078,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3944,6 +4144,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4005,6 +4209,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4075,7 +4283,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2377702135077802885, guid: 4226c72e5a653e649975c592b7bf18a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4154,6 +4362,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4210,6 +4422,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4277,6 +4493,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -54172,6 +54392,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -54234,6 +54458,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -54290,6 +54518,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -54348,6 +54580,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -54404,6 +54640,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -54462,6 +54702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -54518,6 +54762,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -54645,6 +54893,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -54706,6 +54958,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -54779,6 +55035,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -54836,6 +55096,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -54892,6 +55156,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -54955,6 +55223,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -55011,6 +55283,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -55079,6 +55355,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -55099,7 +55379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1956757414}
   - component: {fileID: 1956757413}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55196,6 +55476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -55252,6 +55536,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -55320,6 +55608,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -55376,6 +55668,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -55434,6 +55730,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClawBugPreFab (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -55490,6 +55790,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -55643,6 +55947,10 @@ PrefabInstance:
     - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
       propertyPath: m_Name
       value: ClawBugPreFab (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378258463479626166, guid: ef8e09eeb6afb9342a42ee4130254d54, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -1,0 +1,10 @@
+.dialog {
+    -unity-slice-type: sliced;
+    -unity-slice-scale: 3px;
+    -unity-slice-left: 5;
+    -unity-slice-top: 5;
+    -unity-slice-right: 5;
+    -unity-slice-bottom: 5;
+    background-image: url("project://database/Assets/Sprites/UI/tile.png?fileID=2800000&guid=6cbfdad8cd9b76640b4e31de23fbb3bc&type=3#tile");
+    font-size: 40px;
+}

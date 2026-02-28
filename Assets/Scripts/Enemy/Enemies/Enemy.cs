@@ -89,6 +89,8 @@ public abstract class Enemy<T> : MonoBehaviour, IDamagableEntity where T : Enemy
         transform.Rotate(0,0, Random.Range(-20f , 20f));
     }
 
+        
+    
     private void RandomRotation() 
     {
         float RotationChange = Random.Range(0, 360);
