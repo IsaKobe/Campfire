@@ -13,5 +13,7 @@ namespace Fish
         //public Equip equip;
         public Sprite sprite;
         public float seeRange = 1;
+        public float rotSpeed = 2;
+        public float pickupRange = 0.25f;
     }
 }

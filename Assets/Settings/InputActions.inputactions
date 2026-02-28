@@ -23,6 +23,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "stop",
+                    "type": "Button",
+                    "id": "ea55987a-c08c-4845-a13e-3d5f80cd95bd",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "rear",
+                    "type": "Button",
+                    "id": "f1e56e21-9079-4929-9258-395d801faae5",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -67,6 +85,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "pull",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "94092c8b-c88f-4d32-98f8-e9c8fcd6e2a3",
+                    "path": "<Keyboard>/ctrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "stop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "02958b9f-8550-449d-b1ee-0680adf411f0",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "rear",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

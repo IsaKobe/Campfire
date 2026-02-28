@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fishing.unity
     guid: bbb6485c287b3e241bb8230f2a1269bb
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2c748f17b00c2254f977011f3bd802b2
+  - enabled: 1
+    path: Assets/Scenes/SceneDungeonTutorial.unity
+    guid: e1bf8452160114b47acf3c5fc3bf216c
+  - enabled: 1
+    path: Assets/Scenes/Cave.unity
+    guid: 1974f2461d81cb44a8f1dec60d58d4c5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
