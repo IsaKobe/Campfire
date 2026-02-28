@@ -193,9 +193,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30f53e0c3fe54b446b863982d69c649d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Enemy.Enemies.BaitEnemy
+  EnemyStats: {fileID: 11400000, guid: f92067bd384111c4ca60c8e3b6837137, type: 2}
   CurrentHealth: 0
   IsPlayerInView: 0
-  EnemyStats: {fileID: 11400000, guid: f92067bd384111c4ca60c8e3b6837137, type: 2}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
+  target: {fileID: 0}
+  targetCamera: {fileID: 0}
+  playergo: {fileID: 0}

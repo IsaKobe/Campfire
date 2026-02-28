@@ -17,4 +17,4 @@ MonoBehaviour:
   Speed: 0.02
   Range: 5
   ViewAngle: 90
-  RotateFrame: 70
+  RotateFrame: 200
