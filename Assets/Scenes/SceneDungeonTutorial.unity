@@ -121,9 +121,8 @@ NavMeshSettings:
   m_NavMeshData: {fileID: 0}
 --- !u!1 &42781373
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4742674540871631045, guid: afbfa8ea78da5054f97dac61e43cd561, type: 3}
+  m_PrefabInstance: {fileID: 3112324927710054715}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
@@ -248,9 +247,8 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!4 &42781377
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 6915986414712428117, guid: afbfa8ea78da5054f97dac61e43cd561, type: 3}
+  m_PrefabInstance: {fileID: 3112324927710054715}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42781373}
   serializedVersion: 2

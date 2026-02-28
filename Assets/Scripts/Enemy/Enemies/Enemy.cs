@@ -16,6 +16,7 @@ public abstract class Enemy<T> : MonoBehaviour, IDamagableEntity where T : Enemy
     public bool IsPlayerInView = false;
     private Rigidbody2D rb;
 
+
     protected Transform player;
     [SerializeField] LayerMask playerLayer;
 
