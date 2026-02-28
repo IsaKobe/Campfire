@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class Movements : MonoBehaviour
 {
@@ -7,38 +8,65 @@ public class Movements : MonoBehaviour
 
     [SerializeField] InputActionAsset inputActions;
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] Sword sword;
     protected InputAction Move;
+    protected InputAction Attack;
     Vector3 newMove;
-
-    [SerializeField] float speed = 1000;
+    float attack;
+    bool hasAttacked;
+    public float maxHealth = 100;
+    public float health = 100;
+    [SerializeField] float speed = 1;
 
     void Awake()
     {
         //anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         Move = inputActions.actionMaps[1].FindAction("Move");
+        Attack = inputActions.actionMaps[1].FindAction("Attack");
+        hasAttacked = false;
     }
     private void OnEnable()
     {
         Move.Enable();
+        Attack.Enable();
     }
 
     private void OnDisable()
     {
         Move.Disable();
+        Attack.Disable();
     }
     void Update()
     {
 
         newMove = Move.ReadValue<Vector2>();
+        attack = Attack.ReadValue<float>();
+        if (attack != 0 && !hasAttacked)
+        {
+            Debug.Log("Player attacking");
+            hasAttacked = attack != 0;
+            sword.Attack();
+        }
+        else if (attack == 0)
+        {
+            hasAttacked = false;
+        }
     }
-
 
     private void FixedUpdate()
     {
-        rb.MovePosition(transform.position + (newMove * speed));
+        rb.MovePosition(transform.position + (newMove * speed * Time.deltaTime) );
     }
 
+    public void DealDmg(float dmg)
+    {
+        health -= dmg;
+        if (health <= 0)
+        {
+            // Die();
+        }
+    }
 }
 
 

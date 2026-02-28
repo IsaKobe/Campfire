@@ -320,7 +320,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1185561957}
-  - component: {fileID: 1185561956}
   m_Layer: 0
   m_Name: Init
   m_TagString: Untagged
@@ -328,18 +327,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1185561956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1185561955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e45cdea1ec297a40896bf8e64fc4636, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!4 &1185561957
 Transform:
   m_ObjectHideFlags: 0
@@ -463,6 +450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Movements
   inputActions: {fileID: -944628639613478452, guid: 938a8e2a2d2e62b449bcffdae45e1e43, type: 3}
   rb: {fileID: 1739736474}
+  cam: {fileID: 0}
   speed: 1
 --- !u!50 &1739736474
 Rigidbody2D:

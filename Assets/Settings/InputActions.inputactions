@@ -98,7 +98,7 @@
                     "name": "Attack",
                     "type": "Button",
                     "id": "ab8717d6-1c35-46a0-86be-7eca22d63f14",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -392,17 +392,6 @@
                 },
                 {
                     "name": "",
-                    "id": "69492ee8-e029-446d-9898-73a06ce195ee",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "d78efbd5-e1e1-4fcc-a1d7-b948d1a0dfe6",
                     "path": "<Touchscreen>/primaryTouch/tap",
                     "interactions": "",
@@ -437,7 +426,7 @@
                 {
                     "name": "",
                     "id": "f2f6e5b6-b4e3-439e-9bfa-bdf9a9fd8f4a",
-                    "path": "<Keyboard>/enter",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
