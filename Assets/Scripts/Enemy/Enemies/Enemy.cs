@@ -10,6 +10,11 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
     private float currentSpeed;
     public float CurrentHealth;
     private int currentRotateFrame = 50;
+    protected Vector3 Originpoint;
+    protected float WanderRadius;
+
+    public bool IsPlayerInView = false;
+    private Rigidbody2D rb;
 
     public bool IsPlayerInView = false;
     private Rigidbody2D rb;
