@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 275638564}
   - component: {fileID: 275638565}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 394294311}
   - component: {fileID: 394294314}
   - component: {fileID: 394294313}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: RybiSvet- boarder_0
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -6009,7 +6009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 962403494}
   - component: {fileID: 962403495}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: Square (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6100,7 +6100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1250500064}
   - component: {fileID: 1250500065}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: Square (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6286,7 +6286,7 @@ GameObject:
   - component: {fileID: 1498340863}
   - component: {fileID: 1498340861}
   - component: {fileID: 1498340865}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: Pixel Perfect Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6437,7 +6437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1505427338}
   - component: {fileID: 1505427339}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: GameObject (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -6600,7 +6600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1905876125}
   - component: {fileID: 1905876126}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6691,7 +6691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1945948378}
   - component: {fileID: 1945948379}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6785,7 +6785,7 @@ GameObject:
   - component: {fileID: 2051031560}
   - component: {fileID: 2051031561}
   - component: {fileID: 2051031562}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: Hook
   m_TagString: Hook
   m_Icon: {fileID: 0}
@@ -6967,7 +6967,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2101055908}
   - component: {fileID: 2101055909}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: Square (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

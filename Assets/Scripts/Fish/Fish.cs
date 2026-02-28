@@ -66,11 +66,8 @@ namespace Fish
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Wall"))
-            {
-                Turn();
-                Debug.Log("hit a wall");
-            }
+            Turn();
+            Debug.Log("hit a wall");
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {

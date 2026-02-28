@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 8575886807558475408}
   - component: {fileID: 301665648030827082}
   - component: {fileID: 1577879922678829708}
-  - component: {fileID: 8715076770657301472}
   - component: {fileID: 4187270227807413163}
   - component: {fileID: 2485184290302825517}
+  - component: {fileID: 3331701889123595671}
   m_Layer: 0
   m_Name: DarkWormPreFab
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,20 +117,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8715076770657301472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 128769251269647868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da7ea46d08b61674f80bfa6d59a600b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::wormController
-  CurrentHealth: 0
-  baitStats: {fileID: 11400000, guid: f92067bd384111c4ca60c8e3b6837137, type: 2}
 --- !u!70 &4187270227807413163
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -195,3 +181,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3331701889123595671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128769251269647868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f53e0c3fe54b446b863982d69c649d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Enemy.Enemies.BaitEnemy
+  CurrentHealth: 0
+  IsPlayerInView: 0
+  EnemyStats: {fileID: 11400000, guid: f92067bd384111c4ca60c8e3b6837137, type: 2}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
