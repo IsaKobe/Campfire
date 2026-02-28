@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - Wall
   - Hook
+  - Sword
   - Enemy
   layers:
   - Default
@@ -13,10 +15,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Wall
+  - Fish
+  - Hook
+  - Enemy
   - 
   - 
   - 

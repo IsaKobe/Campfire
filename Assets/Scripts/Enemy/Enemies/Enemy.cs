@@ -16,6 +16,9 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
     public bool IsPlayerInView = false;
     private Rigidbody2D rb;
 
+    public bool IsPlayerInView = false;
+    private Rigidbody2D rb;
+
     protected Transform player;
     [SerializeField] LayerMask playerLayer;
 
@@ -108,6 +111,7 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
         if (CurrentHealth <= 0)
         {
             EnemyStats.Die();
+            OnDeath();
             Destroy(gameObject);
         }
     }
@@ -173,5 +177,14 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
     }
     public virtual void OnDeath() 
     {
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Sword"))
+        {
+            Sword sword = (Sword)collision.gameObject.GetComponent(typeof(Sword));
+            TakeDamage(sword.damage);
+        }
     }
 }
