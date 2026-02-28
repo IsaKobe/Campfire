@@ -44,3 +44,17 @@ Button {
 :root {
     -unity-font-definition: url("project://database/Assets/Font/Kenney%20Pixel%20Square.ttf?fileID=12800000&guid=006f70fec74b083458248b38b8db02ee&type=3#Kenney Pixel Square");
 }
+
+
+
+
+
+
+
+
+
+RepeatButton {
+    display: none;
+    visibility: hidden;
+    overflow: hidden;
+}

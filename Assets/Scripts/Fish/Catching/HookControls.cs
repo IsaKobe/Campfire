@@ -37,7 +37,7 @@ public class HookControls : MonoBehaviour
 
     private void Awake()
     {
-        Cursor.visible = false;
+        //Cursor.visible = false;
         fish = null;
         hookActions = actions.FindActionMap("Hook");
         hookMovement = hookActions.actions[0];
@@ -100,7 +100,6 @@ public class HookControls : MonoBehaviour
             }
             if(rod.position.y < transform.position.y)
             {
-
                 return;
             }
 
