@@ -78,7 +78,7 @@ public class Movements : MonoBehaviour
         {
             Debug.Log("Throw bomb!!");
             hasBombed = throwBomb != 0;
-            Instantiate(GrenadePrefab, transform);
+            Instantiate(GrenadePrefab, transform.position, Quaternion.identity);
         }
         else if (throwBomb== 0)
         {

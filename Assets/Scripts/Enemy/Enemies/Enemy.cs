@@ -81,12 +81,6 @@ public abstract class Enemy<T> : MonoBehaviour, IDamagableEntity where T : Enemy
         rb.MovePosition(movement);
         
     }
-    //hráè je blížko
-    protected void Border()
-    {
-        transform.right = -transform.right;
-        transform.Rotate(0,0, Random.Range(-20f , 20f));
-    }
 
         
     
