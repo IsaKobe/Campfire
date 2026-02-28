@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8421830720930643432}
-  - component: {fileID: 351224231564937810}
   - component: {fileID: 1203912342995791270}
   - component: {fileID: 4807897708716959201}
   - component: {fileID: 2147834960791531334}
@@ -28,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3254625449977283409}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -6, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -36,24 +35,6 @@ Transform:
   - {fileID: 5593783986485368011}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &351224231564937810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3254625449977283409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d10c40a97cc3e6843a77b74c090b6be9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  helm: {fileID: 0}
-  weapon: {fileID: 11400000, guid: f5dcdd36910d5eb4cbaf21c7dad7ac23, type: 2}
-  items:
-  - {fileID: 11400000, guid: 28f12941023066a478206b34b901a3aa, type: 2}
-  - {fileID: 11400000, guid: 536e3832d33752e479818a543c274941, type: 2}
-  - {fileID: 11400000, guid: 4212c79026be03047982bc69d8974267, type: 2}
 --- !u!114 &1203912342995791270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +82,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e20549089c5a637469adb44e1cb30488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Invenory.UI.InventoryView
-  inv: {fileID: 351224231564937810}
   inventoryToggle:
     m_Name: Inventory Toggle
     m_Type: 1
@@ -136,7 +116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5593783986485368011
 Transform:
   m_ObjectHideFlags: 0

@@ -39,19 +39,19 @@ public abstract class Enemy<T> : MonoBehaviour, IDamagableEntity where T : Enemy
     }
     protected virtual void FixedUpdate()
     {
-        
+
         if (IsPlayerInView == true)
         {
             ChasePlayer();
         }
-        if(Vector2.Distance(transform.position,player.position) >= 0.7f) 
+        if (Vector2.Distance(transform.position, player.position) >= 0.7f)
         {
             Move();
         }
 
     }
 
-    public void Move() 
+    public void Move()
     {
         CheckPanic();
         //každej xtej frame = random rotace
@@ -65,27 +65,27 @@ public abstract class Enemy<T> : MonoBehaviour, IDamagableEntity where T : Enemy
                 RandomRotation();
             }
         }
-        else 
+        else
         {
-            if(currentRotateFrame == 0) 
+            if (currentRotateFrame == 0)
             {
                 currentRotateFrame = EnemyStats.RotateFrame;
             }
         }
 
-            //každje fixed frame posune
-            if(Vector2.Distance(transform.position,Originpoint) >= WanderRadius*0.95) 
+        //každje fixed frame posune
+        if (Vector2.Distance(transform.position, Originpoint) >= WanderRadius * 0.95)
         {
             Border();
         }
-            Vector2 movement = transform.position + (-transform.right * currentSpeed / 3);
+        Vector2 movement = transform.position + (-transform.right * currentSpeed / 3);
         rb.MovePosition(movement);
-        
+
     }
 
-        
-    
-    private void RandomRotation() 
+
+
+    private void RandomRotation()
     {
         float RotationChange = Random.Range(0, 360);
 
@@ -104,6 +104,7 @@ public abstract class Enemy<T> : MonoBehaviour, IDamagableEntity where T : Enemy
         }
 
     }
+    public virtual void OnDeath() { }
     public void TakeDamage(float damage) 
     {
         CurrentHealth -= damage;
@@ -180,29 +181,15 @@ public abstract class Enemy<T> : MonoBehaviour, IDamagableEntity where T : Enemy
         transform.right = -transform.right;
         transform.Rotate(0, 0, Random.Range(-20f, 20f));
     }
-    protected void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag!= "Player")   
-        {
-            Border();
-
-    protected void Border()
-    {
-        transform.right = -transform.right;
-        transform.Rotate(0, 0, Random.Range(-20f, 20f));
-    }
+    
     protected void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag != "Player")
         {
             Border();
-
         }
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-    }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Sword"))

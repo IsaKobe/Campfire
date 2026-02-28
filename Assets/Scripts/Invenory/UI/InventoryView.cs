@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NUnit;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
@@ -11,7 +12,7 @@ namespace Assets.Scripts.Invenory.UI
     public partial class InventoryView : MonoBehaviour
     {
         UIDocument document;
-        [SerializeField] Inventory inv;
+        InventoryData inv;
         [SerializeField] InputAction inventoryToggle;
         VisualElement equip;
         VisualElement inventory;
@@ -36,11 +37,11 @@ namespace Assets.Scripts.Invenory.UI
 
         void Awake()
         {
+            inv = Inventory.Inv;
             document = GetComponent<UIDocument>();
             inventory = document.rootVisualElement.Q("Inventory");
             document.rootVisualElement.Q<Button>("Close").clicked += () => Close();
 
-            inventoryToggle.Enable();
             inventoryToggle.performed += (e) => 
             {
                 if (opened)
@@ -60,6 +61,17 @@ namespace Assets.Scripts.Invenory.UI
             equip.Q("Weapon").style.backgroundImage = new(inv.weapon?.icon);
             Close();
         }
+
+        private void OnEnable()
+        {
+            inventoryToggle.Enable();
+        }
+
+        private void OnDisable()
+        {
+            inventoryToggle.Disable();
+        }
+
 
         void CreateItemDragable(ItemData item, VisualElement parent)
         {
