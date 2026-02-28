@@ -171,7 +171,28 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
             }
         }
     }
+    protected void Border() 
+    {
+        transform.right = -transform.right;
+        transform.Rotate(0, 0, Random.Range(-20f, 20f));
+    }
+    protected void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag!= "Player")   
+        {
+            Border();
+
+        }
+    }
     public virtual void OnDeath() 
     {
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Sword"))
+        {
+            Sword sword = (Sword)collision.gameObject.GetComponent(typeof(Sword));
+            TakeDamage(sword.damage);
+        }
     }
 }

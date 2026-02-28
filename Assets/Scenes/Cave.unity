@@ -911,7 +911,7 @@ GameObject:
   - component: {fileID: 1739736475}
   - component: {fileID: 1739736474}
   - component: {fileID: 1739736473}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: drvota_0
   m_TagString: Player
   m_Icon: {fileID: 0}
