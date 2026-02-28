@@ -15,9 +15,7 @@ namespace Assets.Scripts.Enemy.Enemies
 {
     public class BaitEnemy : Enemy<BaitEnemyData>
     {
-        [SerializeField] public Transform target;
-        [SerializeField] public Transform targetCamera;
-        [SerializeField] public GameObject playergo;
+        [SerializeField] GameObject canvas;
 protected override void Awake()
         {
             base.Awake();
@@ -32,8 +30,9 @@ protected override void Awake()
         }
         public override void OnDeath()
         {
-            playergo.transform.position = new Vector3(target.position.x, target.position.y, playergo.transform.position.z);
-            Camera.main.transform.position = new Vector3(targetCamera.position.x, targetCamera.position.y, Camera.main.transform.position.z);
+            //playergo.transform.position = new Vector3(target.position.x, target.position.y, playergo.transform.position.z);
+            //Camera.main.transform.position = new Vector3(targetCamera.position.x, targetCamera.position.y, Camera.main.transform.position.z);
+            canvas.SetActive(true);
         }
     }
 }
