@@ -15,6 +15,5 @@ public class EnemyData : ScriptableObject
     public virtual void Die() 
     {
         Debug.Log(Name + " died");
-        Destroy(this);
     }
 }
