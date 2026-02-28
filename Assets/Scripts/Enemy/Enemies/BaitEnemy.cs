@@ -8,5 +8,17 @@ namespace Assets.Scripts.Enemy.Enemies
 {
     public class BaitEnemy : Enemy<BaitEnemyData>
     {
+        protected override void Awake()
+        {
+            base.Awake();
+        }
+        protected override void Update()
+        {
+            base.Update();
+        }
+        protected override void FixedUpdate()
+        {
+            base.FixedUpdate();
+        }
     }
 }
