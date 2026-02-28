@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Hook
   - Wall
+  - Hook
+  - Sword
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -13,31 +15,31 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - Hook
-  - Walls
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Wall
   - Fish
+  - Hook
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   m_SortingLayers:
   - name: Default
