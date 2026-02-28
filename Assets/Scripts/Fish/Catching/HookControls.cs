@@ -27,17 +27,21 @@ public class HookControls : MonoBehaviour
     InputActionMap hookActions;
     InputAction hookMovement;
     InputAction hookStop;
+    InputAction hookRear;
+    [SerializeField]Transform rod;
+
+    bool rearIn;
 
     Fish.Fish fish;
     public int BaitLevel => baitData.rarity; 
 
     private void Awake()
     {
+        Cursor.visible = false;
         fish = null;
         hookActions = actions.FindActionMap("Hook");
         hookMovement = hookActions.actions[0];
-        hookActions.actions[1].performed += PullHook;
-        hookStop = hookActions.actions[2];
+        hookRear = hookActions.actions[3];
         rb = GetComponent<Rigidbody2D>();
 
         SpriteRenderer renderer = rb.GetComponent<SpriteRenderer>();
@@ -59,31 +63,17 @@ public class HookControls : MonoBehaviour
     {
         if(fish == null)
         {
-            if (currentPullCooldown > 0)
+            if (hookRear.WasPressedThisFrame())
             {
-                currentPullCooldown -= Time.deltaTime;
-                if (currentPullCooldown < 0)
-                    rb.gravityScale = Mathf.Cos(currentPullCooldown / pullCooldown) / fallForce;
-                else
-                    rb.gravityScale = 0.1f;
+                rearIn = true;
+                rb.gravityScale = 0;
+                rb.linearVelocityY = Mathf.Clamp(rb.linearVelocityY, -float.MinValue, 0);
             }
-            else
+            else if(hookRear.WasReleasedThisFrame())
             {
-                if (hookStop.WasPressedThisFrame())
-                {
-                    rb.linearVelocity = new();
-                    rb.gravityScale = 0;
-                }
-                else if (hookStop.WasReleasedThisFrame())
-                {
-                    if (rb.gravityScale == 0)
-                        rb.gravityScale = 0.1f;
-                }
+                rearIn = false;
+                rb.gravityScale = 0.1f;
             }
-        }
-        else
-        {
-            transform.position = Vector2.Lerp(rb.position, transform.parent.position, Time.deltaTime);
         }
     }
     void FixedUpdate()
@@ -97,20 +87,21 @@ public class HookControls : MonoBehaviour
                 Mathf.Lerp(cam.position.y, rb.position.y, Time.deltaTime),
                 -10);
         }
-    }
 
-    void StopHook()
-    {
-        
-    }
+        if (rearIn)
+        {
+            Vector3 vec = rod.position - transform.position;
+            if (Mathf.Abs(vec.x) < 0.01f && Mathf.Abs(vec.y) < 0.01f)
+            {
+                rb.linearVelocity = new();
+                return;
+            }
 
-    void PullHook(InputAction.CallbackContext callbackContext)
-    {
-        if (currentPullCooldown > 0)
-            return;
-        currentPullCooldown = pullCooldown;
-        rb.linearVelocityX = 0;
-        rb.AddForce(new Vector2(hookMovement.ReadValue<float>() * moveStrength, pullStrength), ForceMode2D.Impulse);
+            vec.Normalize();
+            vec.x += hookMovement.ReadValue<float>(); 
+            rb.AddForce(vec);
+           
+        }
     }
 
     public void PullFish(Fish.Fish _fish)
@@ -126,6 +117,8 @@ public class HookControls : MonoBehaviour
 
         rb.gravityScale = 0;
         rb.linearVelocity = new();
-        GetComponent<CapsuleCollider2D>().enabled = false;
+        GetComponent<CircleCollider2D>().enabled = false;
+
+        rearIn = true;
     }
 }
