@@ -1,7 +1,9 @@
+using System;
 using UnityEngine;
 
 namespace Framework.Scripts
 {
+    [Serializable]
     public class BaitData
     {
         public Sprite sprite;

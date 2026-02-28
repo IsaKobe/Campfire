@@ -16,9 +16,6 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
     public bool IsPlayerInView = false;
     private Rigidbody2D rb;
 
-    public bool IsPlayerInView = false;
-    private Rigidbody2D rb;
-
     protected Transform player;
     [SerializeField] LayerMask playerLayer;
 
@@ -85,7 +82,19 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
         
     }
     //hráè je blížko
+    protected void Border()
+    {
+        transform.right = -transform.right;
+        transform.Rotate(0, 0, Random.Range(-20f, 20f));
+    }
+    protected void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag != "Player")
+        {
+            Border();
 
+        }
+    }
     private void RandomRotation() 
     {
         float RotationChange = Random.Range(0, 360);

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Framework.Scripts;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -15,10 +17,21 @@ namespace Fish
         [SerializeField] float verticalMove;
         [SerializeField] int fishCount = 20;
 
-        [SerializeField] int level = 5;
+        [SerializeField] int level;
 
 
         List<Fish> activeFish = new();
+
+        HookControls controls;
+
+
+        //public float Width => width;
+        public Vector2 GetHeightBounds(int level)
+        {
+            float min = -(level * lineHeight + level * linePadding);
+            float max = min - lineHeight;
+            return new Vector2(min, max);
+        }
 
         private void OnDrawGizmos()
         {
@@ -30,14 +43,12 @@ namespace Fish
             }
         }
 
-        private void Start()
+        public void Init(BaitData bait, HookControls _controls)
         {
-            
-            CreateBoundsVertical(-(width + 0.5f));
-            CreateBoundsVertical(width + 0.5f);
+            controls = _controls;
+            level = bait.rarity;
 
-            CreateBoundsHorizontal(0.5f);
-            CreateBoundsHorizontal(GetHeightBounds(level - 1).y - 0.5f);
+            fishes = fishes.Where(q => q.level <= level).ToList();
 
             for (int i = 0; i < fishCount; i++)
             {
@@ -45,97 +56,50 @@ namespace Fish
             }
         }
 
-        void CreateBoundsVertical(float x)
-        {
-            Vector2 bounds = GetHeightBounds(level - 1);
-
-            GameObject gameObject = new GameObject("bound");
-            Rigidbody2D rb = gameObject.AddComponent<Rigidbody2D>();
-            rb.bodyType = RigidbodyType2D.Kinematic;            
-
-            BoxCollider2D collider = gameObject.AddComponent<BoxCollider2D>();
-            gameObject.transform.position = new Vector2(x, bounds.y / 2);
-            collider.size = new Vector2(0.5f, -bounds.y);
-        }
-
-        void CreateBoundsHorizontal(float y)
-        {
-            Vector2 bounds = GetHeightBounds(level - 1);
-
-            GameObject gameObject = new GameObject("bound");
-            Rigidbody2D rb = gameObject.AddComponent<Rigidbody2D>();
-            rb.bodyType = RigidbodyType2D.Kinematic;
-
-            BoxCollider2D collider = gameObject.AddComponent<BoxCollider2D>();
-            gameObject.transform.position = new Vector2(0, y);
-            collider.size = new Vector2(width*2, 0.5f);
-        }
-
-
         public void CreateFish(FishData data)
         {
             GameObject gameObject = new();
+
             gameObject.transform.parent = transform;
             Fish f = gameObject.AddComponent<Fish>();
 
             Vector2 heightBounds = GetHeightBounds(data.level);
             Vector2 spawnPos = new(Random.Range(-width, width), Random.Range(heightBounds.x, heightBounds.y));
             f.Init(data, spawnPos, true);
-            SpriteRenderer renderer = gameObject.AddComponent<SpriteRenderer>();
-            renderer.sprite = data.sprite;
+            
 
             activeFish.Add(f);
         }
 
         public void Update()
         {
-            foreach (Fish f in activeFish)
+            for (int i = activeFish.Count -1; i > -1; i--)
             {
-                MoveFish(f);
+                MoveFish(activeFish[i]);
             }
         }
 
-        Vector2 GetHeightBounds(int level)
-        {
-            float min = -(level * lineHeight + level * linePadding);
-            float max = min - lineHeight;
-            return new Vector2(min, max);
-        }
 
         void MoveFish(Fish fish)
         {
-            Vector2 moveVec = fish.faceLeft ? Vector2.left : Vector2.right;
-            if (fish.continueDirection > 0)
+            if(fish.target == null || fish.canChase == false)
             {
-                moveVec.y = (fish.goingUp ? 0.2f : -0.2f);
-                fish.continueDirection -= Time.deltaTime;
+                fish.Wander(this);
             }
             else
             {
-                fish.continueDirection = Random.Range(0.5f, 2f);
-                fish.goingUp = Random.Range(0, 2) == 1;
+                fish.Chase(this);
             }
+        }
 
-            moveVec *= fish.data.speed * Time.deltaTime;
-
-            moveVec += (Vector2)fish.transform.localPosition;
-
-            if (moveVec.x < -width || moveVec.x > width)
-                fish.Turn();
-
-            Vector2 bound = GetHeightBounds(fish.data.level);
-
-            if (moveVec.y > bound.x)
+        public void GetCaught(Fish fish)
+        {
+            foreach (var item in activeFish)
             {
-                fish.goingUp = false;
-                fish.continueDirection = Random.Range(0.5f, 2f);
+                item.TurnOff();
             }
-            else if (moveVec.y < bound.y)
-            {
-                fish.goingUp = true;
-                fish.continueDirection = Random.Range(0.5f, 2f);
-            }
-            fish.transform.localPosition = moveVec;
+            activeFish.Remove(fish);
+            controls.PullFish(fish);
         }
     }
 }
