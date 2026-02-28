@@ -175,9 +175,16 @@ public abstract class Enemy<T> : MonoBehaviour, IDamagableEntity where T : Enemy
             }
         }
     }
-    public virtual void OnDeath() 
+    protected void Border() 
     {
+        transform.right = -transform.right;
+        transform.Rotate(0, 0, Random.Range(-20f, 20f));
     }
+    protected void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag!= "Player")   
+        {
+            Border();
 
     protected void Border()
     {
@@ -194,6 +201,9 @@ public abstract class Enemy<T> : MonoBehaviour, IDamagableEntity where T : Enemy
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
+    {
+    }
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Sword"))
         {
