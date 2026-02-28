@@ -15,5 +15,6 @@ MonoBehaviour:
   Name: DarkWorm
   MaxHealth: 10
   Speed: 0.02
-  Range: 0
+  Range: 5
+  ViewAngle: 90
   RotateFrame: 70

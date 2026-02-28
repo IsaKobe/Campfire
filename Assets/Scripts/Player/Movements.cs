@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
-
+using UnityEngine.InputSystem.Controls;
 public class Movements : MonoBehaviour
 {
 

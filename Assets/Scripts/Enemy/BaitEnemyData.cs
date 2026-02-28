@@ -2,9 +2,12 @@ using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "BaitEnemy", menuName = "Scriptable Objects/BaitEnemy")]
-public class BaitEnemy : Enemy
+public class BaitEnemyData : EnemyData
 {
-    public float RotateFrame;
+    public BaitEnemyData() 
+    {
+        Range = 360f;
+    }
     public virtual void Run() 
     {
     }
