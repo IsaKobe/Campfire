@@ -1,22 +1,31 @@
+using Microsoft.Win32.SafeHandles;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
 {
-    public float CurrentHealth;
-    public bool IsPlayerInView = false;
-    private float currentSpeed;
     public T EnemyStats;
-
-    private Rigidbody2D rb;
+    private float currentSpeed;
+    public float CurrentHealth;
     private int currentRotateFrame = 50;
+
+    public bool IsPlayerInView = false;
+    private Rigidbody2D rb;
+
+    protected Vector2 Originpoint;
+    protected float WanderRadius;
+
 
     protected Transform player;
     [SerializeField] LayerMask playerLayer;
 
     protected virtual void Awake()
     {
+        Originpoint = transform.position;
+        WanderRadius = 10f;
+
         player = GameObject.FindWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
         CurrentHealth = EnemyStats.MaxHealth;
@@ -36,7 +45,10 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
         {
             ChasePlayer();
         }
-        Move();
+        if(Vector2.Distance(transform.position,player.position) >= 0.7f) 
+        {
+            Move();
+        }
 
     }
 
@@ -45,17 +57,13 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
         CheckPanic();
         //každej xtej frame = random rotace
         currentRotateFrame--;
-        //float RotationChange = Random.Range((transform.rotation.z - 40),(transform.rotation.z+40));
         if (!IsPlayerInView)
         {
             //Debug.Log("IS WANDERING");
             if (currentRotateFrame == 0)
             {
-                
-                float RotationChange = Random.Range(0, 360);
 
-                transform.rotation = Quaternion.Euler(0, 0, RotationChange);
-                currentRotateFrame = EnemyStats.RotateFrame;
+                RandomRotation();
             }
         }
         else 
@@ -67,11 +75,23 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
         }
 
             //každje fixed frame posune
+            if(Vector2.Distance(transform.position,Originpoint) >= WanderRadius*0.95) 
+        {
+            Border();
+        }
             Vector2 movement = transform.position + (-transform.right * currentSpeed / 3);
         rb.MovePosition(movement);
         
     }
     //hráè je blížko
+
+    private void RandomRotation() 
+    {
+        float RotationChange = Random.Range(0, 360);
+
+        transform.rotation = Quaternion.Euler(0, 0, RotationChange);
+        currentRotateFrame = EnemyStats.RotateFrame;
+    }
     public void CheckPanic()
     {
         if (IsPlayerInView)
@@ -112,7 +132,7 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
             //Debug.Log(Vector2.Distance(transform.position, player.position) + " " +EnemyStats.name);
             Vector2 directionToPlayer = (player.position - transform.position).normalized;
 
-            if (Vector2.Angle(-transform.right, directionToPlayer) < EnemyStats.ViewAngle / 2f && directionToPlayer.x >= 0.1f && directionToPlayer.y >= 0.1f)
+            if (Vector2.Angle(-transform.right, directionToPlayer) < EnemyStats.ViewAngle / 2f)
             {
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToPlayer, EnemyStats.Range);
 
@@ -152,6 +172,18 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
                 Gizmos.DrawLine(transform.position, player.position);
             }
         }
+    }
+    protected void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!IsPlayerInView)
+        {
+        Border();
+        }
+    }
+    protected virtual void Border() 
+    {
+        transform.right = -transform.right;
+        transform.Rotate(0,0,Random.Range(-20,20));
     }
     public virtual void OnDeath() 
     {

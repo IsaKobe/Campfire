@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BaitEnemy
   Name: BaitWorm
   MaxHealth: 30
+  Speed: 0.25
   Range: 3
+  ViewAngle: 40
   RotateFrame: 30
