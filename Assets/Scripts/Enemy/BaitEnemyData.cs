@@ -11,8 +11,9 @@ public class BaitEnemyData : EnemyData
     public virtual void Run() 
     {
     }
-    public override void Die() 
+    public override void Die()
     {
         Debug.Log("Drop Bait item");
+        // End level and add item to inventory more likely
     }
 }
