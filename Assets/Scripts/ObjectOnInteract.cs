@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class ObjectOnInteract : MonoBehaviour
+public class ObjectOnInteract : MonoBehaviour, IInteractable
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

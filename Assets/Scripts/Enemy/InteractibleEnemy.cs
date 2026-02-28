@@ -7,12 +7,17 @@ using UnityEngine;
 public class InteractibleEnemy : MonoBehaviour
 {
     [SerializeField]
-    List<ObjectOnInteract> linkedObjectArray;
+    List<GameObject> linkedObjectArray;
     public void Die()
     {
-        foreach (ObjectOnInteract linkedObject in linkedObjectArray)
-            linkedObject.OnInteract();
+        foreach (GameObject linkedObject in linkedObjectArray)
+        {
+            IInteractable i = (IInteractable)linkedObject.GetComponent(typeof(IInteractable));
+
+            i.OnInteract();
+        }
         Destroy(gameObject);
+
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,7 +32,6 @@ public class InteractibleEnemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger enter");
         if (collision.gameObject.CompareTag("Sword"))
         {
             Sword sword = (Sword)collision.gameObject.GetComponent(typeof(Sword));
@@ -37,7 +41,6 @@ public class InteractibleEnemy : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision enter");
         if (collision.gameObject.CompareTag("Player"))
         {
             Movements player = (Movements)collision.gameObject.GetComponent(typeof(Movements));
