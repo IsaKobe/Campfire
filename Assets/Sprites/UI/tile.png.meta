@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fd578fa0c7a77274d86ee14b17cf601b
+guid: 6cbfdad8cd9b76640b4e31de23fbb3bc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3939198992009240826
-    second: puffer fish_0
+      213: 2216962988415778236
+    second: tile_0000_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: puffer fish_0
+      name: tile_0000_0
       rect:
         serializedVersion: 2
-        x: 15
+        x: 0
         y: 0
-        width: 108
-        height: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60f56b533672559c0800000000000000
-      internalID: -3939198992009240826
+      spriteID: cbdf5bc871c34ce10800000000000000
+      internalID: 2216962988415778236
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      puffer fish_0: -3939198992009240826
+      tile_0000_0: 2216962988415778236
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

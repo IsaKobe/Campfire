@@ -2,11 +2,11 @@
     <Style src="project://database/Assets/UI%20Toolkit/Themes/MainMenu.uss?fileID=7433441132597879392&amp;guid=03df0ec05dd98f34db83042f2de3e8d7&amp;type=3#MainMenu"/>
     <ui:VisualElement style="flex-grow: 1; align-self: center; width: 56%; height: 530px; justify-content: center; align-content: center; align-items: center; position: absolute; top: 223px; padding-left: 30px; padding-right: 30px; padding-top: 30px; padding-bottom: 30px;">
         <ui:Label text="&lt;Place Game Name Here&gt;" style="top: -100px; position: absolute; font-size: 40px; -unity-text-align: upper-center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 100%;"/>
-        <ui:VisualElement style="flex-grow: 0; width: 100%; align-self: center; cursor: url(&quot;project://database/Assets/Sprites/Icons/Cursors/cursor_1.png?fileID=2800000&amp;guid=40a4b4efd511c974f8162e19865d6512&amp;type=3#cursor_1&quot;); display: flex;">
-            <ui:Button text="Start"/>
-            <ui:Button text="LoAD"/>
+        <ui:VisualElement name="Menu-Buttons" style="flex-grow: 0; width: 100%; align-self: center; cursor: url(&quot;project://database/Assets/Sprites/Icons/Cursors/cursor_1.png?fileID=2800000&amp;guid=40a4b4efd511c974f8162e19865d6512&amp;type=3#cursor_1&quot;); display: flex;">
+            <ui:Button text="Start" name="Start"/>
+            <ui:Button text="LoAD" name="Load"/>
             <ui:Button text="Settings" name="Settings" enabled="false"/>
-            <ui:Button text="Quit"/>
+            <ui:Button text="Quit" name="Quit"/>
         </ui:VisualElement>
         <ui:VisualElement style="flex-grow: 1; display: none;"/>
     </ui:VisualElement>

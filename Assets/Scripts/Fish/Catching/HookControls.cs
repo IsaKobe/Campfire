@@ -91,9 +91,16 @@ public class HookControls : MonoBehaviour
         if (rearIn)
         {
             Vector3 vec = rod.position - transform.position;
-            if (Mathf.Abs(vec.x) < 0.01f && Mathf.Abs(vec.y) < 0.01f)
+            if (Mathf.Abs(vec.x) < 0.1f && Mathf.Abs(vec.y) < 0.1f)
             {
                 rb.linearVelocity = new();
+                Debug.Log("victory");
+                enabled = false;
+                return;
+            }
+            if(rod.position.y < transform.position.y)
+            {
+
                 return;
             }
 

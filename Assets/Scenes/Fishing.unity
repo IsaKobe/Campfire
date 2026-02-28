@@ -6286,7 +6286,7 @@ GameObject:
   - component: {fileID: 1498340863}
   - component: {fileID: 1498340861}
   - component: {fileID: 1498340865}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Pixel Perfect Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6785,7 +6785,7 @@ GameObject:
   - component: {fileID: 2051031560}
   - component: {fileID: 2051031561}
   - component: {fileID: 2051031562}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Hook
   m_TagString: Hook
   m_Icon: {fileID: 0}

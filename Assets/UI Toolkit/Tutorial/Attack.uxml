@@ -1,0 +1,6 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Themes/Dialog.uss?fileID=7433441132597879392&amp;guid=984ff291ac58e634e920ccaac17961f6&amp;type=3#Dialog"/>
+    <ui:VisualElement class="dialog" style="padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px; width: 405px; -unity-text-align: upper-center;">
+        <ui:Label text="Press &lt;sprite name=&quot;space_key&quot;&gt;  for attack. " enable-rich-text="true" style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; white-space: pre-wrap;"/>
+    </ui:VisualElement>
+</ui:UXML>

@@ -32,6 +32,7 @@ namespace Fish
             detector.offset = new Vector2(-(0.65f + (data.seeRange/2)), 0);
             detector.size = new Vector2(data.seeRange, 0.25f);
             detector.isTrigger = true;
+            gb.layer = LayerMask.NameToLayer("Enemy");
 
             CapsuleCollider2D body = gameObject.GetComponent<CapsuleCollider2D>();
             body.direction = CapsuleDirection2D.Horizontal;

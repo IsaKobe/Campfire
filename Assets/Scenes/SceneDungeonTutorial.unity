@@ -183,7 +183,7 @@ MonoBehaviour:
   sword: {fileID: 2004697023}
   maxHealth: 100
   health: 100
-  speed: 1.5
+  speed: 5
 --- !u!212 &42781376
 SpriteRenderer:
   serializedVersion: 2
@@ -27055,7 +27055,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.32
+  orthographic size: 10.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
