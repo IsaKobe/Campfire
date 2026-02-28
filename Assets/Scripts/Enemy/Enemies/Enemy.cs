@@ -153,4 +153,7 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
             }
         }
     }
+    public virtual void OnDeath() 
+    {
+    }
 }

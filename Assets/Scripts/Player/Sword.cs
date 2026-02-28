@@ -10,8 +10,6 @@ public class Sword : MonoBehaviour
     public float followSharpness = 0.1f;
 
     private float cooldownRemaining = 0;
-    private float ogAngle;
-    private Quaternion ogRotation;
     private void Start()
     {
         cooldown *= 1 / Time.fixedDeltaTime;
@@ -24,11 +22,6 @@ public class Sword : MonoBehaviour
         if (percentDone == 0)
         {
             return;
-        }
-        if (cooldownRemaining == cooldown)
-        {
-            ogAngle = transform.localEulerAngles.z;
-            ogRotation = transform.rotation;
         }
         cooldownRemaining--;
         //Debug.Log(String.Format("percentdone: {0}, cooldown: {1}, remaining: {2}, angle: {3}", percentDone, cooldown, cooldownRemaining, 360 * percentDone));
