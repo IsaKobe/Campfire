@@ -507,7 +507,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Movements
   inputActions: {fileID: -944628639613478452, guid: 938a8e2a2d2e62b449bcffdae45e1e43, type: 3}
   rb: {fileID: 1739736474}
-  speed: 0.2
+  sword: {fileID: 0}
+  maxHealth: 100
+  health: 100
+  speed: 1
 --- !u!50 &1739736474
 Rigidbody2D:
   serializedVersion: 5
@@ -628,6 +631,10 @@ PrefabInstance:
     - target: {fileID: 1564000340749175808, guid: 910232e4fb9219545961d1a7816177fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462443563136913214, guid: 910232e4fb9219545961d1a7816177fb, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 5530169679468720862, guid: 910232e4fb9219545961d1a7816177fb, type: 3}
       propertyPath: m_Name

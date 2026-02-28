@@ -175,4 +175,4 @@ MonoBehaviour:
   EnemyStats: {fileID: 11400000, guid: 9d4c6e6a35e466f4f8ba39034dc8e1ba, type: 2}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 64

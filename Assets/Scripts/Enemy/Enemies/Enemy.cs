@@ -1,5 +1,6 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
 {
@@ -17,6 +18,7 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
     void Awake()
     {
         player = GameObject.FindWithTag("Player").transform;
+        Debug.Log(player.name);
         rb = GetComponent<Rigidbody2D>();
         CurrentHealth = EnemyStats.MaxHealth;
         currentSpeed = EnemyStats.Speed;
@@ -47,7 +49,7 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
         //float RotationChange = Random.Range((transform.rotation.z - 40),(transform.rotation.z+40));
         if (!IsPlayerInView)
         {
-            //Debug.Log("IS WANDERING");
+            Debug.Log("IS WANDERING");
             if (currentRotateFrame == 0)
             {
                 
@@ -96,12 +98,11 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
 
     private void ChasePlayer()
     {
-        //Debug.Log("CHASING PLAYER");
-        Vector3 direction = (transform.position - player.position).normalized;
-        Quaternion AngleDelta = Quaternion.FromToRotation(-transform.right, player.position);
-
-        rb.MoveRotation(AngleDelta * transform.rotation);
-        //Debug.Log("Facing" + -transform.right);
+        Debug.Log("CHASING PLAYER");
+        Vector3 direction = (player.position - transform.position).normalized;
+        //Quaternion AngleDelta = Quaternion.FromToRotation(-transform.right, player.position);
+        transform.right = -direction;
+        //rb.MoveRotation(AngleDelta * transform.rotation);
         //rb.MovePosition(transform.position + (direction*));
     }
 
@@ -116,7 +117,7 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
             {
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToPlayer, EnemyStats.Range);
 
-                if (hit.collider != null)
+                if (hit.collider.tag == "Player")
                 {
                 Debug.Log(hit.collider.tag);
                     IsPlayerInView = true;
