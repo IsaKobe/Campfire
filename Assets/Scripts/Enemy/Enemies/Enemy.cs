@@ -1,22 +1,27 @@
+using Microsoft.Win32.SafeHandles;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
 {
-    public float CurrentHealth;
-    public bool IsPlayerInView = false;
-    private float currentSpeed;
     public T EnemyStats;
-
-    private Rigidbody2D rb;
+    private float currentSpeed;
+    public float CurrentHealth;
     private int currentRotateFrame = 50;
+
+    public bool IsPlayerInView = false;
+    private Rigidbody2D rb;
 
     protected Transform player;
     [SerializeField] LayerMask playerLayer;
 
     protected virtual void Awake()
     {
+        Originpoint = transform.position;
+        WanderRadius = 10f;
+
         player = GameObject.FindWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
         CurrentHealth = EnemyStats.MaxHealth;
@@ -36,26 +41,25 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
         {
             ChasePlayer();
         }
-        Move();
+        if(Vector2.Distance(transform.position,player.position) >= 0.7f) 
+        {
+            Move();
+        }
 
     }
 
     public void Move() 
     {
         CheckPanic();
-        //kaûdej xtej frame = random rotace
+        //ka≈ædej xtej frame = random rotace
         currentRotateFrame--;
-        //float RotationChange = Random.Range((transform.rotation.z - 40),(transform.rotation.z+40));
         if (!IsPlayerInView)
         {
             //Debug.Log("IS WANDERING");
             if (currentRotateFrame == 0)
             {
-                
-                float RotationChange = Random.Range(0, 360);
 
-                transform.rotation = Quaternion.Euler(0, 0, RotationChange);
-                currentRotateFrame = EnemyStats.RotateFrame;
+                RandomRotation();
             }
         }
         else 
@@ -66,12 +70,24 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
             }
         }
 
-            //kaûdje fixed frame posune
+            //ka≈ædje fixed frame posune
+            if(Vector2.Distance(transform.position,Originpoint) >= WanderRadius*0.95) 
+        {
+            Border();
+        }
             Vector2 movement = transform.position + (-transform.right * currentSpeed / 3);
         rb.MovePosition(movement);
         
     }
-    //hr·Ë je blÌûko
+    //hr√°√® je bl√≠≈æko
+
+    private void RandomRotation() 
+    {
+        float RotationChange = Random.Range(0, 360);
+
+        transform.rotation = Quaternion.Euler(0, 0, RotationChange);
+        currentRotateFrame = EnemyStats.RotateFrame;
+    }
     public void CheckPanic()
     {
         if (IsPlayerInView)
