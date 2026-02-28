@@ -58,7 +58,7 @@ namespace Assets.Scripts.Invenory.UI
 
             equip.Q("Helm").style.backgroundImage = new(inv.helm?.icon);
             equip.Q("Weapon").style.backgroundImage = new(inv.weapon?.icon);
-            Open();
+            Close();
         }
 
         void CreateItemDragable(ItemData item, VisualElement parent)

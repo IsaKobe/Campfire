@@ -29,14 +29,14 @@ namespace Fish
 
             detector = gb.AddComponent<CapsuleCollider2D>();
             detector.direction = CapsuleDirection2D.Horizontal;
-            detector.offset = new Vector2(-(0.65f + (data.seeRange/2)), 0);
-            detector.size = new Vector2(data.seeRange, 0.25f);
+            detector.offset = new Vector2(-(2.5f + (data.seeRange/2)), 0);
+            detector.size = new Vector2(data.seeRange, 0.5f);
             detector.isTrigger = true;
             gb.layer = LayerMask.NameToLayer("Enemy");
 
             CapsuleCollider2D body = gameObject.GetComponent<CapsuleCollider2D>();
             body.direction = CapsuleDirection2D.Horizontal;
-            body.size = new(0.65f, 0.25f);
+            body.size = new(2, 0.7f);
 
             Rigidbody2D rigidbody2D = gameObject.AddComponent<Rigidbody2D>();
             rigidbody2D.gravityScale = 0;

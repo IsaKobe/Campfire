@@ -6574,12 +6574,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a7dc2cefbebdcdc4ba693972f5838f80, type: 2}
   - {fileID: 11400000, guid: 90a3b07e2ccbe4f4599584510450b9df, type: 2}
   - {fileID: 11400000, guid: d8afca50bffbbae408a7868683ef7161, type: 2}
+  - {fileID: 11400000, guid: b5356ee1add922c48959224b2616883e, type: 2}
   - {fileID: 11400000, guid: 66e61acf38a50a841b00042bc08b64f3, type: 2}
-  width: 28.51
-  lineHeight: 10
-  linePadding: 2
+  width: 24.1
+  lineHeight: 14.54
+  linePadding: 1
   verticalMove: 0.1
-  fishCount: 40
+  fishCount: 60
   level: 5
 --- !u!4 &1667909904
 Transform:

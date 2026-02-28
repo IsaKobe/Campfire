@@ -48,7 +48,7 @@ namespace Fish
             controls = _controls;
             level = bait.rarity;
 
-            fishes = fishes.Where(q => q.level <= level).ToList();
+            /*fishes = fishes.Where(q => q.level <= level).ToList();*/
 
             for (int i = 0; i < fishCount; i++)
             {

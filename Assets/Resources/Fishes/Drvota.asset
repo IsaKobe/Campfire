@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4794c352070874896a34b68688e9ce, type: 3}
   m_Name: Drvota
   m_EditorClassIdentifier: Assembly-CSharp::Fish.FishData
-  level: 1
+  level: 4
   speed: 4.37
   sprite: {fileID: 21300000, guid: a3de9c12714a02743aff359b670fb239, type: 3}
   seeRange: 1
+  rotSpeed: 2
+  pickupRange: 0.25
