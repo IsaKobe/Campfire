@@ -14,10 +14,6 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
     public bool IsPlayerInView = false;
     private Rigidbody2D rb;
 
-    protected Vector2 Originpoint;
-    protected float WanderRadius;
-
-
     protected Transform player;
     [SerializeField] LayerMask playerLayer;
 
@@ -55,7 +51,7 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
     public void Move() 
     {
         CheckPanic();
-        //kaûdej xtej frame = random rotace
+        //ka≈ædej xtej frame = random rotace
         currentRotateFrame--;
         if (!IsPlayerInView)
         {
@@ -74,7 +70,7 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
             }
         }
 
-            //kaûdje fixed frame posune
+            //ka≈ædje fixed frame posune
             if(Vector2.Distance(transform.position,Originpoint) >= WanderRadius*0.95) 
         {
             Border();
@@ -83,7 +79,7 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
         rb.MovePosition(movement);
         
     }
-    //hr·Ë je blÌûko
+    //hr√°√® je bl√≠≈æko
 
     private void RandomRotation() 
     {
@@ -132,7 +128,7 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
             //Debug.Log(Vector2.Distance(transform.position, player.position) + " " +EnemyStats.name);
             Vector2 directionToPlayer = (player.position - transform.position).normalized;
 
-            if (Vector2.Angle(-transform.right, directionToPlayer) < EnemyStats.ViewAngle / 2f)
+            if (Vector2.Angle(-transform.right, directionToPlayer) < EnemyStats.ViewAngle / 2f && directionToPlayer.x >= 0.1f && directionToPlayer.y >= 0.1f)
             {
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToPlayer, EnemyStats.Range);
 
@@ -172,18 +168,6 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
                 Gizmos.DrawLine(transform.position, player.position);
             }
         }
-    }
-    protected void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (!IsPlayerInView)
-        {
-        Border();
-        }
-    }
-    protected virtual void Border() 
-    {
-        transform.right = -transform.right;
-        transform.Rotate(0,0,Random.Range(-20,20));
     }
     public virtual void OnDeath() 
     {
