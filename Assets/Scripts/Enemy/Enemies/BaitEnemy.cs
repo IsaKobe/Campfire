@@ -1,4 +1,9 @@
-﻿using System;
+﻿
+
+
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +18,18 @@ namespace Assets.Scripts.Enemy.Enemies
         [SerializeField] public Transform target;
         [SerializeField] public Transform targetCamera;
         [SerializeField] public GameObject playergo;
+protected override void Awake()
+        {
+            base.Awake();
+        }
+        protected override void Update()
+        {
+            base.Update();
+        }
+        protected override void FixedUpdate()
+        {
+            base.FixedUpdate();
+        }
         public override void OnDeath()
         {
             playergo.transform.position = new Vector3(target.position.x, target.position.y, playergo.transform.position.z);
@@ -20,3 +37,4 @@ namespace Assets.Scripts.Enemy.Enemies
         }
     }
 }
+

@@ -12,13 +12,12 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
     private Rigidbody2D rb;
     private int currentRotateFrame = 50;
 
-    private Transform player;
+    protected Transform player;
     [SerializeField] LayerMask playerLayer;
 
-    void Awake()
+    protected virtual void Awake()
     {
         player = GameObject.FindWithTag("Player").transform;
-        Debug.Log(player.name);
         rb = GetComponent<Rigidbody2D>();
         CurrentHealth = EnemyStats.MaxHealth;
         currentSpeed = EnemyStats.Speed;
@@ -26,11 +25,11 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
     }
 
     // Update is called once per frame
-    private void Update()
+    protected virtual void Update()
     {
         FindPlayer();
     }
-    void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         
         if (IsPlayerInView == true)
@@ -49,7 +48,7 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
         //float RotationChange = Random.Range((transform.rotation.z - 40),(transform.rotation.z+40));
         if (!IsPlayerInView)
         {
-            Debug.Log("IS WANDERING");
+            //Debug.Log("IS WANDERING");
             if (currentRotateFrame == 0)
             {
                 
@@ -91,7 +90,6 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
         if (CurrentHealth <= 0)
         {
             EnemyStats.Die();
-            OnDeath();
             Destroy(gameObject);
         }
     }
@@ -99,7 +97,7 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
 
     private void ChasePlayer()
     {
-        Debug.Log("CHASING PLAYER");
+        //Debug.Log("CHASING PLAYER");
         Vector3 direction = (player.position - transform.position).normalized;
         //Quaternion AngleDelta = Quaternion.FromToRotation(-transform.right, player.position);
         transform.right = -direction;
@@ -114,13 +112,13 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
             //Debug.Log(Vector2.Distance(transform.position, player.position) + " " +EnemyStats.name);
             Vector2 directionToPlayer = (player.position - transform.position).normalized;
 
-            if (Vector2.Angle(-transform.right, directionToPlayer) < EnemyStats.ViewAngle / 2f)
+            if (Vector2.Angle(-transform.right, directionToPlayer) < EnemyStats.ViewAngle / 2f && directionToPlayer.x >= 0.1f && directionToPlayer.y >= 0.1f)
             {
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToPlayer, EnemyStats.Range);
 
                 if (hit.collider.tag == "Player")
                 {
-                Debug.Log(hit.collider.tag);
+                //Debug.Log(hit.collider.tag);
                     IsPlayerInView = true;
                 }
 
@@ -131,12 +129,6 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
             IsPlayerInView = false;
         }
     }
-
-    public virtual void OnDeath()
-    {
-
-    }
-
     private void OnDrawGizmosSelected()
     {
         if (EnemyStats == null)
@@ -161,14 +153,7 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
             }
         }
     }
-
-    void OnTriggerEnter2D(Collider2D collision)
+    public virtual void OnDeath() 
     {
-        if (collision.gameObject.CompareTag("Sword"))
-        {
-            Sword sword = (Sword)collision.gameObject.GetComponent(typeof(Sword));
-            TakeDamage(sword.damage);
-        }
     }
-
 }

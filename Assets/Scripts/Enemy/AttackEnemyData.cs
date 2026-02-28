@@ -3,8 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "AttackEnemy", menuName = "Scriptable Objects/AttackEnemy")]
 public class AttackEnemyData: EnemyData
 {
-    private float AttackDmg;
-    private float AttackSpeed;
+    public float AttackDmg;
+    public float AttackSpeed;
 
     public AttackEnemyData() 
     {

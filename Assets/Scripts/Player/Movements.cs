@@ -58,7 +58,6 @@ public class Movements : MonoBehaviour
     {
         rb.MovePosition(transform.position + (newMove * speed * Time.deltaTime) );
     }
-
     public void DealDmg(float dmg)
     {
         health -= dmg;
