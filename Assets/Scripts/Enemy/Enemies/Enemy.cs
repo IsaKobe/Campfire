@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
+public abstract class Enemy<T> : MonoBehaviour, IDamagableEntity where T : EnemyData
 {
     public T EnemyStats;
     private float currentSpeed;
@@ -16,8 +16,6 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
     public bool IsPlayerInView = false;
     private Rigidbody2D rb;
 
-    public bool IsPlayerInView = false;
-    private Rigidbody2D rb;
 
     protected Transform player;
     [SerializeField] LayerMask playerLayer;
@@ -85,6 +83,11 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
         
     }
     //hráè je blížko
+    protected void Border()
+    {
+        transform.right = -transform.right;
+        transform.Rotate(0,0, Random.Range(-20f , 20f));
+    }
 
     private void RandomRotation() 
     {
@@ -110,8 +113,9 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
         CurrentHealth -= damage;
         if (CurrentHealth <= 0)
         {
-            EnemyStats.Die();
             OnDeath();
+
+            EnemyStats.Die();
             Destroy(gameObject);
         }
     }
@@ -158,7 +162,7 @@ public abstract class Enemy<T> : MonoBehaviour where T : EnemyData
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, EnemyStats.Range);
 
-        // Calculate the FOV lines based on transform.right (change to transform.up if your sprite faces up)
+        // Calcuate the FOV lines based on transform.right (change to transform.up if your sprite faces up)
         Vector3 viewAngleStep1 = Quaternion.Euler(0, 0, EnemyStats.ViewAngle / 2) * -transform.right;
         Vector3 viewAngleStep2 = Quaternion.Euler(0, 0, -EnemyStats.ViewAngle / 2) * -transform.right;
 
