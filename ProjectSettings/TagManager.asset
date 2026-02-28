@@ -5,8 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Hook
-  - Enemy
-  layers:
+
+  - Sword
+  - Enemy  layers:
   - Default
   - TransparentFX
   - Ignore Raycast
@@ -16,11 +17,13 @@ TagManager:
   - PlayerLayer
   - EnemyLayer
   - 
+  - Enemy
   - 
+  - Weapon
   - 
+  - Walls
   - 
-  - 
-  - 
+  - "\u010Eoura"
   - 
   - 
   - 
