@@ -9,7 +9,9 @@ public class Movements : MonoBehaviour
     [SerializeField] InputActionAsset inputActions;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Sword sword;
-    [SerializeField] GameObject GrenadePrefab;
+    [SerializeField] Grenade GrenadePrefab;
+    [SerializeField] Transform SpawnPoint;
+
     protected InputAction Move;
     protected InputAction Attack;
     protected InputAction Interact;
@@ -17,16 +19,15 @@ public class Movements : MonoBehaviour
     Vector3 newMove;
     float attack;
     bool hasAttacked;
-    bool hasBombed;
     public float maxHealth = 100;
-    public float health = 100;
-    private float throwBomb;
+    public float health;
     [SerializeField] float speed = 1;
     public InteractableTile interactableObject;
 
     void Awake()
     {
         //anim = GetComponent<Animator>();
+        health = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         Move = inputActions.actionMaps[1].FindAction("Move");
         Attack = inputActions.actionMaps[1].FindAction("Attack");
@@ -34,7 +35,6 @@ public class Movements : MonoBehaviour
         Interact = inputActions.actionMaps[1].FindAction("Interact");
         Interact.performed += Interact_performed;
         hasAttacked = false;
-        hasBombed = false;
     }
 
     private void Interact_performed(InputAction.CallbackContext obj)
@@ -60,10 +60,8 @@ public class Movements : MonoBehaviour
     }
     void Update()
     {
-
         newMove = Move.ReadValue<Vector2>();
         attack = Attack.ReadValue<float>();
-        throwBomb = ThrowBomb.ReadValue<float>();
         if (attack != 0 && !hasAttacked)
         {
             Debug.Log("Player attacking");
@@ -74,15 +72,10 @@ public class Movements : MonoBehaviour
         {
             hasAttacked = false;
         }
-        if (throwBomb != 0 && !hasBombed)
+        if (ThrowBomb.WasPerformedThisFrame() && Inventory.Inv.grenade != null)
         {
-            Debug.Log("Throw bomb!!");
-            hasBombed = throwBomb != 0;
-            Instantiate(GrenadePrefab, transform.position, Quaternion.identity);
-        }
-        else if (throwBomb== 0)
-        {
-            hasBombed = false;
+            Grenade grenade = Instantiate(GrenadePrefab, transform.position, Quaternion.identity);
+            grenade.InitFromData(Inventory.Inv.grenade);
         }
     }
 
@@ -93,10 +86,21 @@ public class Movements : MonoBehaviour
     public void DealDmg(float dmg)
     {
         health -= dmg;
+        //Debug.Log(health + " HP LEFT");
         if (health <= 0)
         {
+            OnDeath();
             // Die();
         }
+    }
+    private void OnDeath() 
+    {
+        Debug.Log("You died");
+        enabled = false;
+        health = maxHealth;
+        transform.position = SpawnPoint.position;
+        enabled = true;
+        //Destroy(gameObject);
     }
 }
 

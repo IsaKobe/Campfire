@@ -20,9 +20,10 @@ namespace Assets.Scripts.Enemy.Enemies
         {
             base.Update();
             AtkCooldown -= Time.deltaTime;
-            if (AtkCooldown >= 0) 
+            if (AtkCooldown <= 0&& IsPlayerInView) 
             {
-                if (Vector2.Distance(player.position, transform.position) < AtkEnemyData.Range && IsPlayerInView)
+                //Debug.Log(Vector2.Distance(player.position,transform.position));
+                if (Vector2.Distance(player.position, transform.position) < AtkEnemyData.Range)
                 {
                     Attack();
                 }

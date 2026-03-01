@@ -18,5 +18,5 @@ MonoBehaviour:
   Range: 7
   ViewAngle: 180
   RotateFrame: 0
-  AttackDmg: 20
+  AttackDmg: 30
   AttackSpeed: 5

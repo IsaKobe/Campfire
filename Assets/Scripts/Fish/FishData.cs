@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.Invenory;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
@@ -10,7 +11,7 @@ namespace Fish
     {
         public int level = 1;
         public float speed = 1;
-        //public Equip equip;
+        public ItemData equipDrop;
         public Sprite sprite;
         public float seeRange = 1;
         public float rotSpeed = 2;

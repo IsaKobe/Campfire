@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: ClawBugStats
   m_EditorClassIdentifier: Assembly-CSharp::AttackEnemyData
   Name: ClawBug
-  MaxHealth: 10
+  MaxHealth: 100
   Speed: 0.1
   Range: 10
   ViewAngle: 90
   RotateFrame: 80
-  AttackDmg: 2
+  AttackDmg: 5
   AttackSpeed: 2

@@ -18,3 +18,8 @@ MonoBehaviour:
   Range: 3
   ViewAngle: 40
   RotateFrame: 30
+  bait:
+    sprite: {fileID: -7824972243078653234, guid: 8fe9651b152a7644281d81df1f2552d6, type: 3}
+    name: simple worm
+    description: 
+    rarity: 0

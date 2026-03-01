@@ -3,3 +3,8 @@
     -unity-background-image-tint-color: rgb(63, 16, 16);
     -unity-font-style: normal;
 }
+
+#HealthBar > #unity-progress-bar {
+    max-height: none;
+    height: 100%;
+}
