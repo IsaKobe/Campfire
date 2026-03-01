@@ -10,6 +10,8 @@ public class Movements : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Sword sword;
     [SerializeField] GameObject GrenadePrefab;
+    [SerializeField] Transform SpawnPoint;
+
     protected InputAction Move;
     protected InputAction Attack;
     protected InputAction Interact;
@@ -19,7 +21,7 @@ public class Movements : MonoBehaviour
     bool hasAttacked;
     bool hasBombed;
     public float maxHealth = 100;
-    public float health = 100;
+    public float health;
     private float throwBomb;
     [SerializeField] float speed = 1;
     public InteractableTile interactableObject;
@@ -27,6 +29,7 @@ public class Movements : MonoBehaviour
     void Awake()
     {
         //anim = GetComponent<Animator>();
+        health = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         Move = inputActions.actionMaps[1].FindAction("Move");
         Attack = inputActions.actionMaps[1].FindAction("Attack");
@@ -60,7 +63,6 @@ public class Movements : MonoBehaviour
     }
     void Update()
     {
-
         newMove = Move.ReadValue<Vector2>();
         attack = Attack.ReadValue<float>();
         throwBomb = ThrowBomb.ReadValue<float>();
@@ -93,10 +95,21 @@ public class Movements : MonoBehaviour
     public void DealDmg(float dmg)
     {
         health -= dmg;
+        //Debug.Log(health + " HP LEFT");
         if (health <= 0)
         {
+            OnDeath();
             // Die();
         }
+    }
+    private void OnDeath() 
+    {
+        Debug.Log("You died");
+        gameObject.SetActive(false);
+        health = maxHealth;
+        transform.position = SpawnPoint.position;
+        gameObject.SetActive(true);
+        //Destroy(gameObject);
     }
 }
 
