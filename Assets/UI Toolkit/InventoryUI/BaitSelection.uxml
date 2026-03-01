@@ -1,0 +1,9 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Themes/MainMenu.uss?fileID=7433441132597879392&amp;guid=03df0ec05dd98f34db83042f2de3e8d7&amp;type=3#MainMenu"/>
+    <Style src="project://database/Assets/UI%20Toolkit/Themes/BaitSelection.uss?fileID=7433441132597879392&amp;guid=1a3fe380d289c5f4ea94016574faf26a&amp;type=3#BaitSelection"/>
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: 1595px; align-self: center; justify-content: center; position: absolute; height: 698px; top: 140px; left: 160px; padding-top: 20px; padding-right: 20px; padding-bottom: 30px; padding-left: 20px;">
+        <ui:Button text="" name="Close" style="-unity-slice-left: 8; -unity-slice-top: 8; -unity-slice-right: 8; -unity-slice-bottom: 8; background-image: url(&quot;project://database/Assets/Sprites/Tilesets/UIpackSheet_transparent.png?fileID=7136535191442868051&amp;guid=732924a02e61f934185c6494b2ccd44f&amp;type=3#UIpackSheet_transparent_596&quot;); aspect-ratio: 1; right: 20px; top: 20px; position: absolute;"/>
+        <ui:ListView style="flex-grow: 1; margin-top: 100px; margin-bottom: 20px;"/>
+        <ui:Button text="Start Fishing" name="StartHunt" style="width: 80%; align-self: center;"/>
+    </ui:VisualElement>
+</ui:UXML>

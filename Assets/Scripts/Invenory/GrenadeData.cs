@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Invenory
 {
+    [CreateAssetMenu(fileName = "grenade", menuName ="Items/GrenadeData")]
     public class GrenadeData : ItemData
     {
         public float radius = 3f;

@@ -22,12 +22,12 @@ Button {
     -unity-slice-right: 6;
     -unity-slice-bottom: 6;
     -unity-slice-type: tiled;
-    background-image: url("project://database/Assets/Sprites/UIpackSheet_transparent.png?fileID=3839029853975743845&guid=732924a02e61f934185c6494b2ccd44f&type=3#UIpackSheet_transparent_572");
+    background-image: url("project://database/Assets/Sprites/Tilesets/UIpackSheet_transparent.png?fileID=3839029853975743845&guid=732924a02e61f934185c6494b2ccd44f&type=3#UIpackSheet_transparent_572");
     font-size: 25px;
     padding-top: 0;
-    padding-right: 0;
+    padding-right: 30px;
     padding-bottom: 0;
-    padding-left: 0;
+    padding-left: 30px;
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 0;
@@ -44,14 +44,6 @@ Button {
 :root {
     -unity-font-definition: url("project://database/Assets/Font/Kenney%20Pixel%20Square.ttf?fileID=12800000&guid=006f70fec74b083458248b38b8db02ee&type=3#Kenney Pixel Square");
 }
-
-
-
-
-
-
-
-
 
 RepeatButton {
     display: none;

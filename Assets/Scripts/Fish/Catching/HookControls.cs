@@ -3,6 +3,7 @@ using Framework.Scripts;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class HookControls : MonoBehaviour
@@ -19,7 +20,6 @@ public class HookControls : MonoBehaviour
 
     [Header("Bait")]
     [SerializeField] float folorMargin = 2.5f;
-    [SerializeField] BaitData baitData;
     [SerializeField] Transform cam;
     [SerializeField] FishSpawner spawner;
     Rigidbody2D rb;
@@ -30,10 +30,13 @@ public class HookControls : MonoBehaviour
     InputAction hookRear;
     [SerializeField]Transform rod;
 
+    BaitData baitData;
+
     bool rearIn;
 
     Fish.Fish fish;
-    public int BaitLevel => baitData.rarity; 
+
+    public int BaitLevel { get => baitData.rarity; }
 
     private void Awake()
     {
@@ -44,6 +47,7 @@ public class HookControls : MonoBehaviour
         hookRear = hookActions.actions[3];
         rb = GetComponent<Rigidbody2D>();
 
+        baitData = Inventory.SelectedBait;
         SpriteRenderer renderer = rb.GetComponent<SpriteRenderer>();
         renderer.sprite = baitData.sprite;
 
@@ -94,8 +98,10 @@ public class HookControls : MonoBehaviour
             if (Mathf.Abs(vec.x) < 0.1f && Mathf.Abs(vec.y) < 0.1f)
             {
                 rb.linearVelocity = new();
-                Debug.Log("victory");
+                if(fish.data.equipDrop != null)
+                    Inventory.Inv.items.Add(fish.data.equipDrop);
                 enabled = false;
+                SceneManager.LoadScene("Home");
                 return;
             }
             if(rod.position.y < transform.position.y)
@@ -109,7 +115,7 @@ public class HookControls : MonoBehaviour
            
         }
     }
-
+    
     public void PullFish(Fish.Fish _fish)
     {
         hookActions.Disable();

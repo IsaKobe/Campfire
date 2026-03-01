@@ -1,22 +1,69 @@
+using Assets.Scripts.Invenory;
 using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
-    [SerializeField] public float damage;
-    [SerializeField] public float speed;
-    [SerializeField] public float cooldown;
+    public WeaponData data;
     public float followSharpness = 0.1f;
 
+    float cooldown;
     private float cooldownRemaining = 0;
-    private void Start()
+    static Sword instance;
+    private void Awake()
     {
-        cooldown *= 1 / Time.fixedDeltaTime;
-        cooldown = Mathf.Round(cooldown);
+        instance = this;
+        LoadFromData(Inventory.Inv.weapon);
     }
+    private void OnDestroy()
+    {
+        instance = null;
+    }
+
+    public static void LoadFromData(WeaponData _data)
+    {
+        if (instance == null)
+            return;
+        instance.Init(_data);
+    }
+    void Init(WeaponData _data)
+    {
+        if (_data == null)
+        {
+            _data = ScriptableObject.CreateInstance<WeaponData>();
+            _data.damage = 0;
+            _data.name = "empty";
+            _data.cooldown = 0;
+
+            data = _data;
+            cooldown = _data.cooldown;
+
+            GetComponent<SpriteRenderer>().sprite = null;
+            GetComponent<BoxCollider2D>().enabled = false;
+        }
+        else
+        {
+            data = _data;
+
+            float _cooldown = _data.cooldown;
+            _cooldown *= 1 / Time.fixedDeltaTime;
+            cooldown = Mathf.Round(_cooldown);
+
+
+            GetComponent<SpriteRenderer>().sprite = _data.icon;
+            GetComponent<BoxCollider2D>().enabled = true;
+        }
+        cooldownRemaining = 0;
+        transform.localPosition = new(0, -0.9f);
+        transform.localRotation = Quaternion.Euler(0,0,90);
+    }
+    
     private void FixedUpdate()
     {
+        if (data.name == "empty")
+            return;
+
         float percentDone = cooldownRemaining / cooldown;
 
         if (percentDone == 0)
@@ -30,7 +77,7 @@ public class Sword : MonoBehaviour
 
     public void Attack()
     {
-        if (cooldownRemaining > 0)
+        if (cooldownRemaining > 0 || data.name == "empty")
         {
             return;
         }

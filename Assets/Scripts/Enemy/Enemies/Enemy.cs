@@ -195,7 +195,7 @@ public abstract class Enemy<T> : MonoBehaviour, IDamagableEntity where T : Enemy
         if (collision.gameObject.CompareTag("Sword"))
         {
             Sword sword = (Sword)collision.gameObject.GetComponent(typeof(Sword));
-            TakeDamage(sword.damage);
+            TakeDamage(sword.data.damage);
         }
     }
 }

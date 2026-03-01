@@ -23,5 +23,9 @@ namespace Framework.Scripts
             this.description = description;
             this.rarity = rarity;
         }
+        public BaitData()
+        {
+
+        }
     }
 }

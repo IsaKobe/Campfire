@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Invenory.DefaultInventory
   inventory:
     helm: {fileID: 0}
-    weapon: {fileID: 11400000, guid: f5dcdd36910d5eb4cbaf21c7dad7ac23, type: 2}
-    items:
-    - {fileID: 11400000, guid: 28f12941023066a478206b34b901a3aa, type: 2}
-    - {fileID: 11400000, guid: 4212c79026be03047982bc69d8974267, type: 2}
-    - {fileID: 11400000, guid: 536e3832d33752e479818a543c274941, type: 2}
+    weapon: {fileID: 0}
+    grenade: {fileID: 0}
+    items: []
+    baits: []

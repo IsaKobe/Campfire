@@ -82,7 +82,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 200
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5694381075832084892, guid: 9b6eb06f1803ccd4d858073f4333bbe6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -106,10 +106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f652ba4a7412a1843b258ba442f725f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Grenade
-  radius: 3
-  throwForce: 5
-  dmg: 50
-  explosionDelay: 1.5
 --- !u!50 &7899223195762643764
 Rigidbody2D:
   serializedVersion: 5

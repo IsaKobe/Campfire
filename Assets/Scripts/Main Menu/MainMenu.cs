@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
     {
         uiDocument = GetComponent<UIDocument>();
         VisualElement el = uiDocument.rootVisualElement.Q<VisualElement>("Menu-Buttons");
-        el.Q<Button>("Start").clicked += () => SceneManager.LoadScene("SceneDungeonTutorial");
+        el.Q<Button>("Start").clicked += () => SceneManager.LoadScene("Home");
         el.Q<Button>("Load").clicked += () => SceneManager.LoadScene("Fishing");
         el.Q<Button>("Settings");
         el.Q<Button>("Quit").clicked += () => Application.Quit();

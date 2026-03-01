@@ -11,10 +11,10 @@ namespace Assets.Scripts.Invenory.UI
         
         Vector2 startPanel;
         Vector2 startWorld;
-        InventoryView invenoryView;
+        WindowsToggles invenoryView;
         bool dragging;
 
-        public DragableElement(VisualElement tar, InventoryView _invenory)
+        public DragableElement(VisualElement tar, WindowsToggles _invenory)
         {
             target = tar;
             invenoryView = _invenory;
