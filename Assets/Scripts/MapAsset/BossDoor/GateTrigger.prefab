@@ -152,3 +152,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GateTrigger
   bossRoomToggle: {fileID: 0}
+  boss: {fileID: 6198588929609958451, guid: a093f855f84349b42a3dbe1935eca80d, type: 3}

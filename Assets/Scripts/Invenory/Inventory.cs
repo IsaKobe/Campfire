@@ -13,6 +13,7 @@ public class InventoryData
     public GrenadeData grenade;
     public List<ItemData> items;
     public List<BaitData> baits;
+    public List<ItemData> hats;
 }
 public class Inventory : MonoBehaviour
 {

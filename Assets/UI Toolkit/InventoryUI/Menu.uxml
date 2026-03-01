@@ -6,7 +6,7 @@
         <ui:Label text="Game Paused" name="Title" style="-unity-text-align: upper-center; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; font-size: 50px;"/>
         <ui:Label text="" name="Content" style="-unity-text-align: upper-left; padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; font-size: 25px; white-space: normal;"/>
         <ui:VisualElement style="flex-grow: 0; flex-direction: row; justify-content: space-around; align-items: flex-end;">
-            <ui:Button text="Unpase" name="Unpause" style="width: 33%;"/>
+            <ui:Button text="Continue" name="Unpause" style="width: 33%;"/>
             <ui:Button text="Return Home" name="Home" style="width: 33%;"/>
         </ui:VisualElement>
     </ui:VisualElement>

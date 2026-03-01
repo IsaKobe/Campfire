@@ -23,7 +23,7 @@ public abstract class Enemy<T> : MonoBehaviour, IDamagableEntity where T : Enemy
     protected virtual void Awake()
     {
         Originpoint = transform.position;
-        WanderRadius = 10f;
+        WanderRadius = 15f;
 
         player = GameObject.FindWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
@@ -105,7 +105,7 @@ public abstract class Enemy<T> : MonoBehaviour, IDamagableEntity where T : Enemy
 
     }
     public virtual void OnDeath() { }
-    public void TakeDamage(float damage) 
+    public virtual void TakeDamage(float damage) 
     {
         CurrentHealth -= damage;
         if (CurrentHealth <= 0)
