@@ -43,6 +43,21 @@ namespace Assets.Scripts.Invenory.UI
             inventoryOpened = true;
             transform.GetChild(0).GetComponent<TilemapRenderer>().enabled = true;
             inventoryDoc.rootVisualElement.style.display = DisplayStyle.Flex;
+
+           
+            inventory.Clear();
+
+            foreach (ItemData item in inv.items)
+            {
+                CreateItemDragable(item, inventory);
+            }
+
+            VisualElement hats = inventoryDoc.rootVisualElement.Q<VisualElement>("Hats");
+            foreach (ItemData item in inv.hats)
+            {
+                CreateItemDragable(item, hats);
+            }
+
             Time.timeScale = 0;
         }
         public void OpenBaitSelection()
@@ -114,10 +129,6 @@ namespace Assets.Scripts.Invenory.UI
                 equip = inventory[0];
                 inventory = inventory[1];
 
-                foreach (ItemData item in inv.items)
-                {
-                    CreateItemDragable(item, inventory);
-                }
 
                 equip.Q("Weapon").style.backgroundImage = new(inv.weapon?.icon);
                 equip.Q("Helm").style.backgroundImage = new(inv.helm?.icon);

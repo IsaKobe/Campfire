@@ -1,0 +1,4 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/health/health.uss?fileID=7433441132597879392&amp;guid=2e0c3c81a993ac5468a5a38f80dbf180&amp;type=3#health"/>
+    <ui:ProgressBar value="22" title="Health" binding-path="hpValue" name="ProgressBar"/>
+</ui:UXML>

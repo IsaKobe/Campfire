@@ -18,3 +18,4 @@ MonoBehaviour:
     grenade: {fileID: 0}
     items: []
     baits: []
+    hats: []

@@ -1,4 +1,5 @@
 using Microsoft.Win32.SafeHandles;
+using Settings.Sound;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -107,9 +108,12 @@ public abstract class Enemy<T> : MonoBehaviour, IDamagableEntity where T : Enemy
     public virtual void OnDeath() { }
     public virtual void TakeDamage(float damage) 
     {
+        MusicPlayer.PlaySoundEffect(Resources.Load<AudioClip>("SFX/hitEnemy"));
         CurrentHealth -= damage;
         if (CurrentHealth <= 0)
         {
+            MusicPlayer.PlaySoundEffect(Resources.Load<AudioClip>("SFX/enemyDead"));
+
             OnDeath();
 
             EnemyStats.Die();

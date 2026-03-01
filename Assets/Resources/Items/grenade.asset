@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Grenade
   description: 
   icon: {fileID: 5694381075832084892, guid: 9b6eb06f1803ccd4d858073f4333bbe6, type: 3}
+  clip: {fileID: 8300000, guid: a1693d125feacbb4f9a780b800c499d4, type: 3}
   radius: 3
   throwForce: 10
   dmg: 50

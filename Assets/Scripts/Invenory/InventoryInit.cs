@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Settings.Sound;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using UnityEditor;
@@ -13,7 +14,12 @@ namespace Assets.Scripts.Invenory
         {
             GameObject game = new GameObject();
             Inventory inventory = game.AddComponent<Inventory>();
-            inventory.Init(Resources.Load<DefaultInventory>("DefaultInv").inventory);
+            inventory.Init(GameObject.Instantiate(Resources.Load<DefaultInventory>("DefaultInv")).inventory);
+
+            
+            MusicPlayer play = game.AddComponent<MusicPlayer>();
+            play.Select(0);
+            
         }
     }
 }

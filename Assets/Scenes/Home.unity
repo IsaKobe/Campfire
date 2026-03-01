@@ -17613,12 +17613,12 @@ MonoBehaviour:
     name: old worms
     description: 
     rarity: 0
-  content: "He betrayed me... he betrayed. I knew it, and that\u2019s why I hid a
-    part of my fortune where nothing can take it from me\u2014<b>INTO THE DEPTHS</b>.
-    Into a living fish that dwells at the bottom of this flooded cave. The only thing
-    it can be caught on are worms from the black soil. But there are other fish in
-    the lake as well; while they don't hold the treasure, they will be of use to
-    you nonetheless... <b>BELIEVE ME!</b>"
+  content: "My dear. beloved diary, he betrayed me! I knew it, and that\u2019s why
+    I hid a part of my fortune where nothing can take it from me\u2014<i><b>INTO
+    THE DEPTHS</b></i>. Into a living fish that dwells at the bottom of this flooded
+    cave. The only thing it can be caught on are worms from the black soil. But there
+    are other fish in the lake as well; while they don't hold the treasure, they
+    will be of use to you nonetheless... <i><b>BELIEVE ME!</b></i>"
 --- !u!1001 &234868582326015259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17691,10 +17691,14 @@ PrefabInstance:
       propertyPath: baitDoc
       value: 
       objectReference: {fileID: 958932552}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4957715706323574210, guid: afbfa8ea78da5054f97dac61e43cd561, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 607611552179850471, guid: afbfa8ea78da5054f97dac61e43cd561, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: afbfa8ea78da5054f97dac61e43cd561, type: 3}
 --- !u!1001 &6352573461419946954
 PrefabInstance:

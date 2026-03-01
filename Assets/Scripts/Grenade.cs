@@ -1,4 +1,5 @@
 using Assets.Scripts.Invenory;
+using Settings.Sound;
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -10,6 +11,7 @@ public class Grenade : MonoBehaviour
     private Vector3 mousePoss;
     public void Explode()
     {
+        MusicPlayer.PlaySoundEffect(data.clip);
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, data.radius);
         foreach (Collider2D nearbyObject in colliders)
         {

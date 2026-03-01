@@ -6,7 +6,7 @@
             <ui:Tab label="Inventory" name="" style="height: 100%;">
                 <ui:VisualElement name="Inventory" style="flex-grow: 1; width: 100%; height: 100%; flex-direction: row;">
                     <ui:VisualElement style="width: 35%;">
-                        <ui:VisualElement name="Portrait" style="flex-grow: 1; position: absolute; top: 34px; left: 68px; border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; background-image: url(&quot;project://database/Assets/Sprites/UI/1.png?fileID=2800000&amp;guid=410de6db4e1d547498920724c19e03ea&amp;type=3#1&quot;); aspect-ratio: 1; height: 400px;"/>
+                        <ui:VisualElement name="Portrait" style="flex-grow: 1; position: absolute; top: 34px; left: 68px; border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; background-image: url(&quot;project://database/Assets/Sprites/Player/1.png?fileID=2800000&amp;guid=410de6db4e1d547498920724c19e03ea&amp;type=3#1&quot;); aspect-ratio: 1; height: 400px;"/>
                         <ui:VisualElement style="flex-grow: 1; justify-content: space-around; flex-direction: row; align-self: stretch; bottom: 0; position: absolute; width: 100%;">
                             <ui:VisualElement name="Weapon" class="item-frame"/>
                             <ui:VisualElement name="Helm" class="item-frame"/>
@@ -16,8 +16,10 @@
                     <ui:VisualElement name="Stored" style="flex-grow: 1; flex-wrap: wrap; padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px; flex-direction: row;"/>
                 </ui:VisualElement>
             </ui:Tab>
-            <ui:Tab label="Hats"/>
+            <ui:Tab label="Hats">
+                <ui:VisualElement name="Hats" style="flex-grow: 1; width: 100%; height: 100%;"/>
+            </ui:Tab>
         </ui:TabView>
-        <ui:Button text="" name="Close" style="-unity-slice-left: 8; -unity-slice-top: 8; -unity-slice-right: 8; -unity-slice-bottom: 8; background-image: url(&quot;project://database/Assets/Sprites/UIpackSheet_transparent.png?fileID=7136535191442868051&amp;guid=732924a02e61f934185c6494b2ccd44f&amp;type=3#UIpackSheet_transparent_596&quot;); aspect-ratio: 1; right: 20px; top: 20px; position: absolute;"/>
+        <ui:Button text="" name="Close" style="-unity-slice-left: 8; -unity-slice-top: 8; -unity-slice-right: 8; -unity-slice-bottom: 8; background-image: url(&quot;project://database/Assets/Sprites/Tilesets/UIpackSheet_transparent.png?fileID=7136535191442868051&amp;guid=732924a02e61f934185c6494b2ccd44f&amp;type=3#UIpackSheet_transparent_596&quot;); aspect-ratio: 1; right: 20px; top: 20px; position: absolute;"/>
     </ui:VisualElement>
 </ui:UXML>

@@ -1,0 +1,6 @@
+:root {
+	
+}
+.unity-progress-bar__progress {
+		background-color: #FF0000;
+	}

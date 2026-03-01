@@ -1,17 +1,21 @@
+using Settings.Sound;
+using System;
+using Unity.Properties;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 using UnityEngine.InputSystem.Controls;
-public class Movements : MonoBehaviour
+using UnityEngine.UIElements;
+
+public class Movements : MonoBehaviour, INotifyBindablePropertyChanged
 {
 
-
+    
     [SerializeField] InputActionAsset inputActions;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Sword sword;
     [SerializeField] Grenade GrenadePrefab;
     [SerializeField] Transform SpawnPoint;
-
+    
     protected InputAction Move;
     protected InputAction Attack;
     protected InputAction Interact;
@@ -21,13 +25,19 @@ public class Movements : MonoBehaviour
     bool hasAttacked;
     public float maxHealth = 100;
     public float health;
+    [CreateProperty]
+    public float Health => health;
     [SerializeField] float speed = 1;
     public InteractableTile interactableObject;
+
+    public event EventHandler<BindablePropertyChangedEventArgs> propertyChanged;
 
     void Awake()
     {
         //anim = GetComponent<Animator>();
         health = maxHealth;
+        propertyChanged?.Invoke(this, new(nameof(Health)));
+
         rb = GetComponent<Rigidbody2D>();
         Move = inputActions.actionMaps[1].FindAction("Move");
         Attack = inputActions.actionMaps[1].FindAction("Attack");
@@ -85,7 +95,11 @@ public class Movements : MonoBehaviour
     }
     public void DealDmg(float dmg)
     {
+        MusicPlayer.PlaySoundEffect(Resources.Load<AudioClip>("SFX/hitHurt"));
+
         health -= dmg;
+        propertyChanged?.Invoke(this, new(nameof(Health)));
+
         //Debug.Log(health + " HP LEFT");
         if (health <= 0)
         {
@@ -95,6 +109,7 @@ public class Movements : MonoBehaviour
     }
     private void OnDeath() 
     {
+        MusicPlayer.PlaySoundEffect(Resources.Load<AudioClip>("SFX/dead"));
         Debug.Log("You died");
         enabled = false;
         health = maxHealth;
